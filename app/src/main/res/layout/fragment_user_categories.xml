@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.category.UserCategoriesFragment">
+
+    <data>
+
+
+        <variable
+            name="categoryAdapter"
+            type="projects.android.myshop.ui.category.CategoryAdapter" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f0f7">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adapter="@{categoryAdapter}"
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:paddingBottom="50dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/category_item" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/category_empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_categories"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</layout>

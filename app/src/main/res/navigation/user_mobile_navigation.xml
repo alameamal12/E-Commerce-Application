@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_mobile_navigation"
+    app:startDestination="@+id/user_navigation_home">
+
+    <fragment
+        android:id="@+id/user_navigation_home"
+        android:name="projects.android.myshop.ui.home.UserHomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_user_home">
+
+        <action
+            android:id="@+id/action_user_navigation_home_to_user_navigation_products"
+            app:destination="@id/user_navigation_products"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+        <action
+            android:id="@+id/action_user_navigation_home_to_user_navigation_product_details"
+            app:destination="@id/user_navigation_products"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/user_navigation_categories"
+        android:name="projects.android.myshop.ui.category.UserCategoriesFragment"
+        android:label="@string/categories"
+        tools:layout="@layout/fragment_user_categories">
+
+        <action
+            android:id="@+id/action_user_navigation_categories_to_user_navigation_products"
+            app:destination="@id/user_navigation_products"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+        <action
+            android:id="@+id/action_user_navigation_categories_to_user_navigation_product_details"
+            app:destination="@id/user_navigation_products"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/user_navigation_cart"
+        android:name="projects.android.myshop.ui.cart.UserCartFragment"
+        android:label="@string/cart"
+        tools:layout="@layout/fragment_user_cart" />
+
+    <fragment
+        android:id="@+id/user_navigation_account"
+        android:name="projects.android.myshop.ui.user.UserAccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_user_account" />
+
+
+    <activity
+        android:id="@+id/user_navigation_products"
+        android:name="projects.android.myshop.ui.product.UserProductsActivity"
+        tools:layout="@layout/activity_user_products" />
+
+    <activity
+        android:id="@+id/user_navigation_product_details"
+        android:name="projects.android.myshop.ui.product.UserProductDetailsActivity"
+        tools:layout="@layout/activity_user_product_details" />
+
+
+</navigation>
